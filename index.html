@@ -1,0 +1,53 @@
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Happy Independence Day</title>
+    <style>
+    	body {
+    		height: 100%;background-image: url(tri.png);
+background-repeat: no-repeat;
+background-size: cover;
+    	}
+    	.responsive img {
+    		width: 100%;
+    		max-width: 100%;
+    	}
+    </style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+    $('#submit').click(function(e) {  
+        var inputvalue = $("#fname").val();
+        window.location.replace(" http://www.wishersworld.ga/"+inputvalue);
+
+    });
+});
+</script> 
+</head>
+<body>
+	<div class="responsive">
+		<center><img src="sal.png" alt="Flag Hoisting" ></center>
+	</div>
+	<h1>WISH YOU A HAPPY INDEPENDENCE DAY <span id="result"></span></h1>
+	 <form action="PayslipServlet" method="get">
+       
+          Your Name:   <input type="text" name="fname" id="fname"><br/>
+     
+          
+          <br>
+          <input id="submit" type="button" value="Submit" onClick="pr()">
+        </form>
+
+        <script>
+          function pr() {
+            document.getElementById("result").innerHTML = document.getElementById('fname').value ;
+          }
+        </script>
+<!-- 
+       <input type="text"  id="input"> 
+       <button type="button" id="button">Click Me!</button> -->
+</body>
+</html>
